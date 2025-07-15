@@ -21,7 +21,8 @@ export const loadCommodityData = async (selectedYear) => {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 second timeout
     
-    const response = await fetch(`/data/${year}.xlsx`, {
+    const basePath = process.env.PUBLIC_URL || '';
+    const response = await fetch(`${basePath}/data/${year}.xlsx`, {
       signal: controller.signal
     });
     clearTimeout(timeoutId);

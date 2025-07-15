@@ -3,7 +3,8 @@ import * as XLSX from 'xlsx';
 // Load country data from Excel file
 export const loadCountryData = async () => {
   try {
-    const response = await fetch('/data/impexp_countrydata.xlsx');
+    const basePath = process.env.PUBLIC_URL || '';
+    const response = await fetch(`${basePath}/data/impexp_countrydata.xlsx`);
     const arrayBuffer = await response.arrayBuffer();
     const workbook = XLSX.read(arrayBuffer, { type: 'array' });
     const sheetName = workbook.SheetNames[0];

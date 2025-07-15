@@ -39,11 +39,13 @@ export const loadExcelData = async (filePath) => {
 };
 
 export const loadSummaryData = async () => {
-  return await loadExcelData('/data/trade_2071_082.xlsx');
+  const basePath = process.env.PUBLIC_URL || '';
+  return await loadExcelData(`${basePath}/data/trade_2071_082.xlsx`);
 };
 
 export const loadGrowthData = async () => {
-  return await loadExcelData('/data/trad_Percechange2072_to_82.xlsx');
+  const basePath = process.env.PUBLIC_URL || '';
+  return await loadExcelData(`${basePath}/data/trad_Percechange2072_to_82.xlsx`);
 };
 
 // Data processing functions matching Python logic

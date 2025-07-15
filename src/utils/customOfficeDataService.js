@@ -4,7 +4,8 @@ import * as XLSX from 'xlsx';
 export const loadCustomOfficeData = async () => {
   try {
     console.log('Loading custom office data...');
-    const response = await fetch('/data/customoffice_trade_allyr.xlsx');
+    const basePath = process.env.PUBLIC_URL || '';
+    const response = await fetch(`${basePath}/data/customoffice_trade_allyr.xlsx`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);

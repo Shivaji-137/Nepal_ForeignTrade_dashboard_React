@@ -3,7 +3,8 @@ import * as XLSX from 'xlsx';
 // Load product data from Excel file
 export const loadProductData = async () => {
   try {
-    const response = await fetch('/data/impexp_Productdata.xlsx');
+    const basePath = process.env.PUBLIC_URL || '';
+    const response = await fetch(`${basePath}/data/impexp_Productdata.xlsx`);
     const arrayBuffer = await response.arrayBuffer();
     const workbook = XLSX.read(arrayBuffer, { type: 'array' });
     const sheetName = workbook.SheetNames[0];
