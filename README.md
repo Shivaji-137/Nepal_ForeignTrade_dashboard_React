@@ -199,16 +199,13 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - **Data Provider**: Department of Customs, Government of Nepal
 - **Developer**: Shivaji Chaulagain
-- **Institution**: Ministry of Finance, Nepal
 - **Purpose**: Trade policy analysis and decision support
 
 ## Contact
 
 **Shivaji Chaulagain**
 - GitHub: [@Shivaji-137](https://github.com/Shivaji-137)
-- Email: [Your Email]
-- LinkedIn: [Your LinkedIn Profile]
-
+- Email: shivajichaulagain@gmail.com
 ---
 
 © 2025 Shivaji Chaulagain. All rights reserved.
