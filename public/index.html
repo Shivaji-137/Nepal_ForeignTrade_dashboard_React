@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#003893" />
     <meta
       name="description"
@@ -17,18 +17,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Mobile viewport fix for GitHub Pages -->
+    <!-- 
+      Robust Mobile Viewport Fix for GitHub Pages.
+      This forces mobile browsers to render the page at the device's actual width,
+      preventing the "zoomed-out" small appearance.
+    -->
     <style>
-      @media only screen and (max-width: 768px) {
-        html {
-          font-size: 16px !important;
-          -webkit-text-size-adjust: 100% !important;
-          -ms-text-size-adjust: 100% !important;
+      @media screen and (max-width: 768px) {
+        html, body {
+          /* Prevents mobile browsers from automatically shrinking text */
+          -webkit-text-size-adjust: 100%;
+          -ms-text-size-adjust: 100%;
+          /* Ensures the page doesn't have unwanted horizontal scrollbars */
+          overflow-x: hidden;
         }
         body {
-          font-size: 14px !important;
-          line-height: 1.5 !important;
+          /* Establish a solid base font size for mobile */
+          font-size: 16px !important;
+          min-width: 100%;
         }
+        #root {
+          /* Make sure the main React container takes up the full screen width */
+          width: 100vw;
+          overflow-x: hidden;
+        }
+        /* Force Ant Design components to be mobile-friendly */
         .ant-layout-header {
           height: 48px !important;
           line-height: 48px !important;
