@@ -32,6 +32,7 @@ function App() {
   const [tradeData, setTradeData] = useState(null);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState('home');
+  const [showEnglishDate, setShowEnglishDate] = useState(false); // New state for date toggle
 
   useEffect(() => {
     const initializeData = async () => {
@@ -48,6 +49,15 @@ function App() {
     };
 
     initializeData();
+  }, []);
+
+  // Effect to toggle between Nepali and English dates
+  useEffect(() => {
+    const dateToggleInterval = setInterval(() => {
+      setShowEnglishDate(prev => !prev);
+    }, 4000); // Toggle every 3 seconds
+
+    return () => clearInterval(dateToggleInterval); // Cleanup on unmount
   }, []);
 
   // Navigation handler function
@@ -79,7 +89,7 @@ function App() {
         const timer = setTimeout(() => {
           setTypedText(fullText.slice(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
-        }, 100); // Typing speed
+        }, 50); // Typing speed
         
         return () => clearTimeout(timer);
       }
@@ -173,7 +183,7 @@ function App() {
             maxWidth: '900px',
             margin: '0 auto 1.5rem auto'
           }}>
-            Comprehensive Analysis of Nepal's International Trade Data (FY 2071/72 - 2081/82 BS)
+            Comprehensive Analysis of Nepal's International Trade Data ({showEnglishDate ? 'FY 2014/15 - 2024/25 AD' : 'FY 2071/72 - 2081/82 BS'})
           </h2>
           
           {/* Trade Animation Icons */}
@@ -433,7 +443,7 @@ function App() {
             font-size: 1.1rem !important;
           }
           
-          .about-feature-text {
+            .about-feature-text {
             font-size: 0.85rem !important;
           }
           
@@ -527,7 +537,7 @@ function App() {
             fontWeight: '500',
             textAlign: 'justify'
           }}>
-            📊 This dashboard analyzes Nepal's foreign trade from fiscal year <strong style={{ color: '#60a5fa' }}>2071/72</strong> to the first 11 months of <strong style={{ color: '#60a5fa' }}>2081/82</strong> (Bikram Sambat). 
+            📊 This dashboard analyzes Nepal's foreign trade from fiscal year <strong style={{ color: '#60a5fa' }}>{showEnglishDate ? '2014/15' : '2071/72'}</strong> to the first 11 months of <strong style={{ color: '#60a5fa' }}>{showEnglishDate ? '2024/25' : '2081/82'}</strong> ({showEnglishDate ? 'AD' : 'Bikram Sambat'}). 
             It provides insights into Nepal's import and export patterns each year, the trade balance (difference between imports and exports), 
             and trends in major traded products. The interactive charts and comprehensive summaries help users understand how Nepal's international trade has evolved over this decade.
           </p>
@@ -539,7 +549,7 @@ function App() {
             textAlign: 'justify'
           }}>
             🔍 This comprehensive dashboard provides detailed insights into Nepal's international trade patterns and economic relationships with trading partners worldwide. 
-            Built using modern web technologies, it processes and visualizes trade data spanning from fiscal year <strong style={{ color: '#34d399' }}>2071/72</strong> to <strong style={{ color: '#34d399' }}>2081/82</strong> (Bikram Sambat), offering both historical perspective and current trade analysis.
+            Built using modern web technologies, it processes and visualizes trade data spanning from fiscal year <strong style={{ color: '#34d399' }}>{showEnglishDate ? '2014/15' : '2071/72'}</strong> to <strong style={{ color: '#34d399' }}>{showEnglishDate ? '2024/25' : '2081/82'}</strong> ({showEnglishDate ? 'AD' : 'Bikram Sambat'}), offering both historical perspective and current trade analysis.
           </p>
         </div>
         
@@ -1037,7 +1047,9 @@ function App() {
         }}>
           <p style={{ color: 'var(--gray-600)', margin: 0, fontSize: '10px' }}>
             Data Source: Department of Customs, Ministry of Finance, Government of Nepal<br />
-            <small style={{ fontSize: '8px' }}>FY 2071/72 - 2081/82 (BS) | Updated July 2025</small>
+            <small style={{ fontSize: '8px' }}>
+              FY 2071/72 - 2081/82 BS | Updated July 2025
+            </small>
           </p>
           <hr style={{ margin: '0.25rem 0', border: 'none', borderTop: '1px solid #e5e7eb' }} />
           <div>
