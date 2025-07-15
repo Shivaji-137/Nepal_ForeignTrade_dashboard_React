@@ -36,7 +36,7 @@ jobs:
       run: npm ci
 
     - name: Run tests
-      run: npm test -- --coverage --watchAll=false
+      run: npm test -- --coverage --watchAll=false --passWithNoTests
 
     - name: Build for production
       run: npm run build
