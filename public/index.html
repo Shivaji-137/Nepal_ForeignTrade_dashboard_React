@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <meta name="theme-color" content="#003893" />
     <meta
       name="description"
@@ -16,6 +16,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Mobile viewport fix for GitHub Pages -->
+    <style>
+      @media only screen and (max-width: 768px) {
+        html {
+          font-size: 16px !important;
+          -webkit-text-size-adjust: 100% !important;
+          -ms-text-size-adjust: 100% !important;
+        }
+        body {
+          font-size: 14px !important;
+          line-height: 1.5 !important;
+        }
+        .ant-layout-header {
+          height: 48px !important;
+          line-height: 48px !important;
+        }
+        .ant-menu-horizontal {
+          line-height: 46px !important;
+        }
+        .ant-btn {
+          font-size: 14px !important;
+          height: 32px !important;
+        }
+        .ant-typography {
+          font-size: inherit !important;
+        }
+      }
+    </style>
     
     <!-- GitHub Pages SPA routing script -->
     <script type="text/javascript">
