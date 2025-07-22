@@ -537,7 +537,7 @@ function App() {
             fontWeight: '500',
             textAlign: 'justify'
           }}>
-            📊 This dashboard analyzes Nepal's foreign trade from fiscal year <strong style={{ color: '#60a5fa' }}>{showEnglishDate ? '2014/15' : '2071/72'}</strong> to the first 11 months of <strong style={{ color: '#60a5fa' }}>{showEnglishDate ? '2024/25' : '2081/82'}</strong> ({showEnglishDate ? 'AD' : 'Bikram Sambat'}). 
+            📊 This dashboard analyzes Nepal's foreign trade from fiscal year <strong style={{ color: '#60a5fa' }}>'2071/72'</strong> to the fiscal year <strong style={{ color: '#60a5fa' }}>'2081/82'</strong> ('Bikram Sambat'). 
             It provides insights into Nepal's import and export patterns each year, the trade balance (difference between imports and exports), 
             and trends in major traded products. The interactive charts and comprehensive summaries help users understand how Nepal's international trade has evolved over this decade.
           </p>
@@ -549,7 +549,7 @@ function App() {
             textAlign: 'justify'
           }}>
             🔍 This comprehensive dashboard provides detailed insights into Nepal's international trade patterns and economic relationships with trading partners worldwide. 
-            Built using modern web technologies, it processes and visualizes trade data spanning from fiscal year <strong style={{ color: '#34d399' }}>{showEnglishDate ? '2014/15' : '2071/72'}</strong> to <strong style={{ color: '#34d399' }}>{showEnglishDate ? '2024/25' : '2081/82'}</strong> ({showEnglishDate ? 'AD' : 'Bikram Sambat'}), offering both historical perspective and current trade analysis.
+            Built using modern web technologies, it processes and visualizes trade data spanning from fiscal year <strong style={{ color: '#34d399' }}>'2014/15'</strong> to <strong style={{ color: '#34d399' }}>'2024/25'</strong> ('AD'), offering both historical perspective and current trade analysis.
           </p>
         </div>
         
