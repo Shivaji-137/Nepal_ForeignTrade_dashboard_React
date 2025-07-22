@@ -1048,7 +1048,7 @@ function App() {
           <p style={{ color: 'var(--gray-600)', margin: 0, fontSize: '10px' }}>
             Data Source: Department of Customs, Ministry of Finance, Government of Nepal<br />
             <small style={{ fontSize: '8px' }}>
-              FY 2071/72 - 2081/82 BS | Updated July 2025
+              FY 2071/72 - 2081/82 BS | Updated July 22, 2025
             </small>
           </p>
           <hr style={{ margin: '0.25rem 0', border: 'none', borderTop: '1px solid #e5e7eb' }} />
