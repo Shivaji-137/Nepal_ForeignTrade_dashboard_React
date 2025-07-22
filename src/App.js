@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { GithubOutlined, LinkedinOutlined } from '@ant-design/icons';
+
+
 import { Menu, Spin, Alert, Button, Card, Row, Col } from 'antd';
 import { 
   HomeOutlined,
@@ -890,46 +893,59 @@ function App() {
   );
 
   // Contact page component
-  const ContactPage = () => (
-    <div className="about-contact-container" style={{ 
-      width: '100%', 
-      padding: '2rem', 
-      background: 'transparent', 
-      color: 'white' 
-    }}>
-      <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-        <Card style={{
-          background: 'rgba(255, 255, 255, 0.1)', 
-          border: '1px solid rgba(255, 255, 255, 0.2)',
-          backdropFilter: 'blur(10px)'
-        }}>
-          <h2 className="about-contact-title" style={{ 
-            color: 'white',
-            fontSize: '1.5rem'
-          }}>Contact Information</h2>
-          <div className="about-contact-content" style={{ 
-            fontSize: '1.1rem', 
-            lineHeight: '2', 
-            color: '#f0f0f0' 
-          }}>
-            <p><strong style={{ color: 'white' }}>Developer:</strong> Shivaji Chaulagain</p>
-            <p><strong style={{ color: 'white' }}>Email:</strong> shivajichaulagain@gmail.com</p>
-            <p><strong style={{ color: 'white' }}>Project:</strong> Nepal Foreign Trade Analytics Dashboard</p>
-            <p><strong style={{ color: 'white' }}>Version:</strong> 1.0.0</p>
-            <p><strong style={{ color: 'white' }}>Last Updated:</strong> July 2025</p>
-          </div>
-          <hr className="about-contact-footer" style={{ margin: '2rem 0', borderColor: 'rgba(255, 255, 255, 0.3)' }} />
-          <p style={{ 
-            fontSize: '0.9rem', 
-            color: '#d0d0d0' 
-          }}>
-            For technical support, feature requests, or data inquiries, please reach out via email.
-          </p>
-        </Card>
-      </div>
-    </div>
-  );
+const ContactPage = () => (
+  <div className="about-contact-container" style={{ 
+    width: '100%', 
+    padding: '2rem', 
+    background: 'transparent', 
+    color: 'white' 
+  }}>
+    <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+      <Card style={{
+        background: 'rgba(255, 255, 255, 0.1)', 
+        border: '1px solid rgba(255, 255, 255, 0.2)',
+        backdropFilter: 'blur(10px)',
+        padding: '2rem'
+      }}>
+        <h2 className="about-contact-title" style={{ 
+          color: 'white',
+          fontSize: '1.5rem'
+        }}>Contact Information</h2>
 
+        <div className="about-contact-content" style={{ 
+          fontSize: '1.1rem', 
+          lineHeight: '2', 
+          color: '#f0f0f0' 
+        }}>
+          <p><strong style={{ color: 'white' }}>Developer:</strong> Shivaji Chaulagain</p>
+          <p><strong style={{ color: 'white' }}>Email:</strong> shivajichaulagain@gmail.com</p>
+          <p><strong style={{ color: 'white' }}>Project:</strong> Nepal Foreign Trade Analytics Dashboard</p>
+          <p><strong style={{ color: 'white' }}>Last Updated:</strong> July 2025</p>
+          
+
+          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+            <p><strong style={{ color: 'white' }}>Follow me on:</strong></p>
+            <a href="https://github.com/Shivaji-137" target="_blank" rel="noopener noreferrer" style={{ color: 'white', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <GithubOutlined style={{ fontSize: '20px' }} /> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/shivaji137/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <LinkedinOutlined style={{ fontSize: '20px' }} /> LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <hr className="about-contact-footer" style={{ margin: '2rem 0', borderColor: 'rgba(255, 255, 255, 0.3)' }} />
+
+        <p style={{ 
+          fontSize: '0.9rem', 
+          color: '#d0d0d0' 
+        }}>
+          For technical support, feature requests, or data inquiries, please reach out via email.
+        </p>
+      </Card>
+    </div>
+  </div>
+);
   // Render current page content
   const renderContent = () => {
     if (loading) {
