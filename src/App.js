@@ -920,7 +920,7 @@ const ContactPage = () => (
           <p><strong style={{ color: 'white' }}>Developer:</strong> Shivaji Chaulagain</p>
           <p><strong style={{ color: 'white' }}>Email:</strong> shivajichaulagain@gmail.com</p>
           <p><strong style={{ color: 'white' }}>Project:</strong> Nepal Foreign Trade Analytics Dashboard</p>
-          <p><strong style={{ color: 'white' }}>Last Updated:</strong> July 2025</p>
+          <p><strong style={{ color: 'white' }}>Last Updated:</strong> July 22, 2025</p>
           
 
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
