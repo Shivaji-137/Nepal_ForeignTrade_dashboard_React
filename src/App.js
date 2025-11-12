@@ -540,7 +540,7 @@ function App() {
             fontWeight: '500',
             textAlign: 'justify'
           }}>
-            📊 This dashboard analyzes Nepal's foreign trade from fiscal year <strong style={{ color: '#60a5fa' }}>'2071/72'</strong> to the fiscal year <strong style={{ color: '#60a5fa' }}>'2081/82'</strong> ('Bikram Sambat'). 
+            📊 This dashboard analyzes Nepal's foreign trade from fiscal year <strong style={{ color: '#60a5fa' }}>'2071/72'</strong> to the fiscal year <strong style={{ color: '#60a5fa' }}>'2082/83'</strong> ('Bikram Sambat'). 
             It provides insights into Nepal's import and export patterns each year, the trade balance (difference between imports and exports), 
             and trends in major traded products. The interactive charts and comprehensive summaries help users understand how Nepal's international trade has evolved over this decade.
           </p>
@@ -552,7 +552,7 @@ function App() {
             textAlign: 'justify'
           }}>
             🔍 This comprehensive dashboard provides detailed insights into Nepal's international trade patterns and economic relationships with trading partners worldwide. 
-            Built using modern web technologies, it processes and visualizes trade data spanning from fiscal year <strong style={{ color: '#34d399' }}>'2014/15'</strong> to <strong style={{ color: '#34d399' }}>'2024/25'</strong> ('AD'), offering both historical perspective and current trade analysis.
+            Built using modern web technologies, it processes and visualizes trade data spanning from fiscal year <strong style={{ color: '#34d399' }}>'2014/15'</strong> to <strong style={{ color: '#34d399' }}> first 3 month of '2025/26'</strong> ('AD'), offering both historical perspective and current trade analysis.
           </p>
         </div>
         
@@ -1064,7 +1064,7 @@ const ContactPage = () => (
           <p style={{ color: 'var(--gray-600)', margin: 0, fontSize: '10px' }}>
             Data Source: Department of Customs, Ministry of Finance, Government of Nepal<br />
             <small style={{ fontSize: '8px' }}>
-              FY 2071/72 - 2081/82 BS | Updated July 22, 2025
+              FY 2071/72 - 2082/83 BS | Updated Nov 12, 2025
             </small>
           </p>
           <hr style={{ margin: '0.25rem 0', border: 'none', borderTop: '1px solid #e5e7eb' }} />
