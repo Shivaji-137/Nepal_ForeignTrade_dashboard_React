@@ -455,7 +455,7 @@ const SummaryDashboard = ({ onNavigate }) => {
       {/* KPI Section */}
       <Card style={{ marginBottom: '24px' }}>
         <Text strong style={{ fontSize: '14px', marginBottom: '16px', display: 'block' }}>
-          KPI: Based on Annual data (Shrawan-Asar) of FY 2081/82 (Mid July 2024 to Mid July 2025) in comparison with previous year
+          KPI: Based on First 3 month of FY 2082/83 (Mid July 2025 to Mid Oct 2025) in comparison with previous year
         </Text>
         <Row gutter={[8, 8]}>
           {kpiCards.map((card, index) => (

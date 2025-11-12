@@ -40,12 +40,12 @@ export const loadExcelData = async (filePath) => {
 
 export const loadSummaryData = async () => {
   const basePath = process.env.PUBLIC_URL || '';
-  return await loadExcelData(`${basePath}/data/trade_2071_082.xlsx`);
+  return await loadExcelData(`${basePath}/data/trade_2071_083.xlsx`);
 };
 
 export const loadGrowthData = async () => {
   const basePath = process.env.PUBLIC_URL || '';
-  return await loadExcelData(`${basePath}/data/trad_Percechange2072_to_82.xlsx`);
+  return await loadExcelData(`${basePath}/data/trad_Percechange2072_to_83.xlsx`);
 };
 
 // Data processing functions matching Python logic
@@ -130,7 +130,7 @@ export const convertFiscalYears = (data, format = 'BS') => {
   if (format === 'AD') {
     const fiscalYearAD = [
       "2014/15", "2015/16", "2016/17", "2017/18", "2018/19", 
-      "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25"
+      "2019/20", "2020/21", "2021/22", "2022/23", "2023/24", "2024/25", "2025/26"
     ];
     const rangeYr = fiscalYearAD.length - data.length;
     return fiscalYearAD.slice(rangeYr);
@@ -181,7 +181,7 @@ export const prepareChartData = (summaryData, growthData, yearFormat = 'BS') => 
 
 // Get available year range for slider
 export const getYearRange = (data) => {
-  if (!data.length) return { min: '2071/72', max: '2081/82' };
+  if (!data.length) return { min: '2071/72', max: '2082/83' };
   
   const years = data.map(row => row['Fiscal Year']).sort();
   return {
