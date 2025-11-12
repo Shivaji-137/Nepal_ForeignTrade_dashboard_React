@@ -921,10 +921,10 @@ const ContactPage = () => (
           <p><strong style={{ color: 'white' }}>Email:</strong> shivajichaulagain@gmail.com</p>
           <p><strong style={{ color: 'white' }}>Project:</strong> Nepal Foreign Trade Analytics Dashboard</p>
           <p><strong style={{ color: 'white' }}>Last Updated:</strong> July 22, 2025</p>
-          
+          <p><strong style={{ color: 'white' }}>Follow me on:</strong></p>
 
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-            <p><strong style={{ color: 'white' }}>Follow me on:</strong></p>
+            
             <a href="https://github.com/Shivaji-137" target="_blank" rel="noopener noreferrer" style={{ color: 'white', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <GithubOutlined style={{ fontSize: '20px' }} /> GitHub
             </a>
