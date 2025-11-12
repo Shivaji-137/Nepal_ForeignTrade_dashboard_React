@@ -186,7 +186,7 @@ function App() {
             maxWidth: '900px',
             margin: '0 auto 1.5rem auto'
           }}>
-            Comprehensive Analysis of Nepal's International Trade Data ({showEnglishDate ? 'FY 2014/15 - 2024/25 AD' : 'FY 2071/72 - 2081/82 BS'})
+            Comprehensive Analysis of Nepal's International Trade Data ({showEnglishDate ? 'FY 2014/15 -  first 3 month of 2025/26 AD' : 'FY 2071/72 - first 3 month of 2082/83 BS'})
           </h2>
           
           {/* Trade Animation Icons */}
@@ -920,7 +920,7 @@ const ContactPage = () => (
           <p><strong style={{ color: 'white' }}>Developer:</strong> Shivaji Chaulagain</p>
           <p><strong style={{ color: 'white' }}>Email:</strong> shivajichaulagain@gmail.com</p>
           <p><strong style={{ color: 'white' }}>Project:</strong> Nepal Foreign Trade Analytics Dashboard</p>
-          <p><strong style={{ color: 'white' }}>Last Updated:</strong> July 22, 2025</p>
+          <p><strong style={{ color: 'white' }}>Last Updated:</strong> Nov 12, 2025</p>
           <p><strong style={{ color: 'white' }}>Follow me on:</strong></p>
 
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
